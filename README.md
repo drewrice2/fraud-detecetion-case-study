@@ -8,7 +8,7 @@ The model was designed to take one instance, classify it as fraud or not with as
 
 A server sent out live requests, or unseen data, to the site we set up.
 
-**Technologies used:**
+Technologies used:
     - Python 2.7
     - SKLearn's RandomForestClassifier and train_test_split
     - Mongo DB, via PyMongo
