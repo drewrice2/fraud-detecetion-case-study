@@ -3,11 +3,14 @@ import numpy as np
 import cPickle as pickle
 from  sklearn.ensemble import RandomForestClassifier
 from sklearn.cross_validation import train_test_split
-# PARENT / MAIN FUNCTION
-#
-# reads in train data
-# runs through other functions and builds model
+
 def build_model():
+    '''
+    PARENT / MAIN FUNCTION
+
+    reads in train data & runs through other functions to build model
+    '''
+
     df = pd.read_json('/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/data/train_new.json')
     df = feature_engineer(df)
     X, y = build_X_and_y(df)
