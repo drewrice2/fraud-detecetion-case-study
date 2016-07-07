@@ -25,4 +25,6 @@ Technologies used:
 - Flask
 - Pandas, numpy
 
+*NOTE: due to the nature of the sprint, some of the code is a bit hacky, so beware...*
+
 *Scott Contri, Clay Porter, Drew Rice, 2016.*
