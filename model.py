@@ -10,7 +10,7 @@ def build_model():
 
     reads in train data & runs through other functions to build model
     '''
-    df = pd.read_json('/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/data/train_new.json')
+    df = pd.read_json('path/to/data.json')
     df = feature_engineer(df)
     X, y = build_X_and_y(df)
     # build Random Forest
@@ -26,7 +26,7 @@ def pickle_that_model(model):
     input: model
     output: none
     '''
-    with open("/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/model.pkl", 'w') as f:
+    with open("path/to/pickle.pkl", 'w') as f:
         pickle.dump(model, f)
 
 def feature_engineer(dataframe):

@@ -6,7 +6,7 @@ We began with feature selection and engineering. Based on the assumption that mi
 
 The model was designed to take one instance, classify it as fraud or not with associated probability scores, then save the results to a Mongo database. We then initialized a site on our local designed to receive one request and go through the previously described steps.
 
-A server sent out live requests, or unseen data, to the site we set up.
+A server sent out live requests, or unseen data in JSON format, to the site we set up. We then classified and stored those new requests.
 
 Technologies used:
 
