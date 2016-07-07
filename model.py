@@ -10,7 +10,6 @@ def build_model():
 
     reads in train data & runs through other functions to build model
     '''
-
     df = pd.read_json('/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/data/train_new.json')
     df = feature_engineer(df)
     X, y = build_X_and_y(df)
