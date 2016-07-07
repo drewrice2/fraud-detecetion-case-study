@@ -47,9 +47,6 @@ def feature_engineer(dataframe):
     # fill NaN's
     dataframe.fillna(0,inplace=True)
 
-    # create labels
-    dataframe['label'] = np.where((dataframe['acct_type']=='fraudster_event') | (dataframe['acct_type']=='fraudster') , 1, 0)
-
     # create uppercase percentage metric
     dataframe['uprcse_ltrs'] = map(lambda message: sum(1 for c in message if c.isupper()), dataframe['name'])
     dataframe['name_len'] = map(lambda message: len(message), dataframe['name'])
@@ -77,6 +74,3 @@ def build_X_and_y(dataframe):
     y = dataframe[['label']]
 
     return X, y
-
-if __name__ == '__main__':
-    build_model()
