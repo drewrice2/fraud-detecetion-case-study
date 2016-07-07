@@ -3,13 +3,12 @@ import numpy as np
 import cPickle as pickle
 from  sklearn.ensemble import RandomForestClassifier
 from sklearn.cross_validation import train_test_split
-
 # PARENT / MAIN FUNCTION
 #
 # reads in train data
 # runs through other functions and builds model
 def build_model():
-    df = pd.read_json('path/to/data.json')
+    df = pd.read_json('/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/data/train_new.json')
     df = feature_engineer(df)
     X, y = build_X_and_y(df)
     # build Random Forest
@@ -17,19 +16,25 @@ def build_model():
     model.fit(X, y)
     pickle_that_model(model)
 
-# FUNC: pickle the model!
-#
-# input: model
-# output: none
+
 def pickle_that_model(model):
-    with open("path/to/pickle.pkl", 'w') as f:
+    '''
+    FUNC: pickle the model!
+
+    input: model
+    output: none
+    '''
+    with open("/Users/drewrice/Desktop/Galvanize/Github/fraud-detection-case-study/model.pkl", 'w') as f:
         pickle.dump(model, f)
 
-# FUNC: feature engineer multiple features in an attempt to improve the model
-#
-# input: raw dataframe
-# output: dataframe with new features included
 def feature_engineer(dataframe):
+    '''
+    FUNC: feature engineer multiple features in an attempt to improve the model
+
+    input: raw dataframe
+    output: dataframe with new features included
+
+    '''
     # count NaN's, add column
     temporary_df = dataframe.replace(r'\s+( +\.)|#',np.nan,regex=True).replace('',np.nan)
     missin_list=[]
@@ -59,11 +64,13 @@ def feature_engineer(dataframe):
 
     return dataframe
 
-# FUNC: build X and y
-#
-# input: dataframe
-# output: X dataframe and y dataframe
 def build_X_and_y(dataframe):
+    '''
+    FUNC: build X and y
+
+    input: dataframe
+    output: X dataframe and y dataframe
+    '''
     X = dataframe[['venue_latitude','venue_longitude','no_name','uprcse_percent','gts','channels','user_type','user_age','has_logo','body_length','name_length','org_twitter','org_facebook','event_created','event_published','event_end','event_start','event_duration','loc','missing_count']]
     y = dataframe[['label']]
 
