@@ -14,9 +14,9 @@ The model was designed to take one instance, classify it as fraud or not with as
 A server sent out live requests, or unseen data in JSON format, to the site we set up. We then classified and stored those new requests an the Mongo database. We coded up a dashboard on the splash page of the site for a quick-view of essential info. Essentially, we wanted to make potentially fraudulent cases accessible at a glance.
 
 
-<center> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </center>
+<center> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </center>
 ![Dashboard Example](https://github.com/drewrice2/fraud-detection-case-study-DSI/blob/master/Dashboard_example.png)
-<center> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </center>
+<center> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </center>
 
 Technologies used:
 - Python 2.7
