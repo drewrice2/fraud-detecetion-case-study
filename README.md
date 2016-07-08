@@ -27,6 +27,14 @@ Technologies used:
 - Flask
 - Pandas, numpy
 
+Future steps would include:
+- Grid searching to optimize the model
+- Clean up the database
+- Test other models
+- NLP on event title and description
+- Make the dashboard look freakin’ sweet
+
+
 *NOTE: due to the nature of the sprint, some of the code is a bit hacky, so beware...*
 
 *Scott Contri, Clay Porter, Drew Rice, 2016.*
