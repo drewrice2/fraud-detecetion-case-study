@@ -1,8 +1,8 @@
 # Fraud Detection Case Study
 
-A two-day case study on fraud detection. The goal of this sprint was to create an end-to-end prediction platform.
+A two-day case study on fraud detection. The goal of this sprint was to create an end-to-end prediction platform. First, we were broken up into teams of three.
 
-We began with **feature selection and engineering**. Some of the features we engineered were:
+Our team began with **feature selection and engineering**. Some of the features we engineered were:
 - Count NaNs, or missing data, per column
 - A percentage of uppercase characters for each title
 - Event duration field
